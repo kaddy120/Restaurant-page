@@ -6,9 +6,9 @@ module.exports = {
     index: './src/index.js',
   },
   devtool: 'inline-source-map',
-  /* devtool: 'eval-source-map', */
   devServer: {
     static: './dist',
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -19,7 +19,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
+    /* clean: true, */
   },
   module: {
     rules: [
