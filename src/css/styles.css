@@ -6,6 +6,129 @@
   padding: 0;
 }
 
+:root {
+}
+
 body {
   background: lightgray;
+  font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header, footer {
+  background: #1d1c1c;
+  color: #fff;
+}
+
+nav {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  padding-block: 24px;
+}
+svg {
+  fill: #f4e6e6;
+}
+
+.log {
+  font-size: 36px;
+}
+
+nav ul {
+  display: flex;
+  font-size: 20px;
+}
+
+.list-space {
+}
+
+nav li + li {
+  margin-left: 24px;
+}
+
+li {
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  /* padding-block: 24px; */
+}
+
+main {
+  height: 100vh;
+}
+
+footer ul {
+  display: inline-flex;
+}
+
+footer .container {
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  margin-right: 24px;
+}
+
+footer li:first-of-type {
+  margin-right: 12px;
+}
+
+.home .hero {
+  display: grid;
+}
+.hero-bg_img{
+  /* background-image: url(../assets/coffee-beans.jpeg); */
+  background-image: url(../assets/Rectangle\ 50.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: -10px;
+  height: 530px;
+  grid-area: 1/-1;
+}
+
+.hero-tagline {
+  inline-size: 52ch;
+  color: #e4e3e3;
+  font-size: 32px;
+  text-align: center;
+}
+
+.hero-intro {
+  display: flex;  
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(18, 16, 16, 0.60);
+  grid-area: 1/-1;
+}
+
+h1{
+  font-size: 96px;
+}
+
+.title {
+  color: #fefefe;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.menu{
+  max-width: 1000px;
+  margin-inline: auto;
+}
+
+.menu-img {
+  /* background-image: url(../assets/barista.png); */
+  /* width: 200px; */
 }
