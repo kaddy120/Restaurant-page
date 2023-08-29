@@ -1,9 +1,18 @@
 /*get link*/
 import baristaImg from '../assets/barista.png';
-console.log("img img img img img")
-console.log('img: ', baristaImg);
+import location from '../assets/Location.svg'
+import time from "../assets/Group 42.svg";
 
 export default function Home() {
+  const myIcon = new Image();
+  myIcon.src = baristaImg;
+
+  const locationIcon = new Image();
+  locationIcon.src = location;
+
+  const timeIcon = new Image();
+  timeIcon.src = time;
+
   const home = `
         <section class="home">
           <article class="hero">
@@ -14,28 +23,38 @@ export default function Home() {
             </div>
           </article>
           <div class='menu'>
-             <div class='menu-img'><img src='../assets/barista.png'/></div>
+             <div class='menu-img'>${myIcon.outerHTML}</div>
              <div class='menu-about'>
                 <h3>Our Menu</h3>
                 <p>
                     Our diverse menu boasts a fusion of classic brunch favorites and innovative dishes. Whether you're craving the timeless perfection of a stack fluffy pancakes drizzled in real maple syrup or tempted by our signature avocado toast topped with poached eggs, every bite is an experience to remember.
                 </p>
                 <button>View Menu</button>
-              </div>
+           </div>
+           <section class='info'> 
+             <div class='container'>
+               <div>
+                 <div class="info-icon">
+                    ${locationIcon.outerHTML}  
+                 </div>
+                 <div>
+                   <h4>Locate Us</h4> 
+                    <p> Ravele 22, Thsilwavhusiku, Limpopo</> 
+                 </div>
+               </div>
+               <div class="info-operating_time">
+                 <div class="info-icon">
+                    ${timeIcon.outerHTML}  
+                 </div>
+                 <div>
+                   <h4>Locate Us</h4> 
+                    <p> Ravele 22, Thsilwavhusiku, Limpopo</> 
+                 </div>
+               </div>
+             </div>
+           </section>
           </div>
-          <h3>something about view our menu</h3>
-          <article>
-            <h3>Hours</h3>
-            <ul>
-              <li>Sunday: 8am - 8pm</li>
-              <li>Monday: 6am - 6pm</li>
-              <li>Tuesday: 6am - 6pm</li>
-              <li>Wednesday: 6am - 6pm</li>
-              <li>Thursday: 6am - 10pm</li>
-              <li>Friday: 6am - 10pm</li>
-              <li>Saturday: 8am - 10pm</li>
-            </ul>
-          </article>
+          </div>
         </section>
 `;
   return home;
