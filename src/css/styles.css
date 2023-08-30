@@ -7,12 +7,142 @@
 }
 
 :root {
+  --gray-50: #fafafa;
+  --gray-400: #d4d4d8;
+  --gray-500: #6b7280;
+  --gray-600: #4b5563;
+  --gray-300: #d4d4d8;
+  --gray-200: #e4e4e7;
+  --gray-100: #f3f4f6;
+  --gray-700: #374151;
+  --gray-800: #1f2937;
+  --gray-900: #111827;
+
+  /* fonts */
+  --step--1: clamp(0.69rem, calc(0.66rem + 0.18vw), 0.8rem);
+  --step-0: clamp(0.85rem, calc(0.78rem + 0.29vw), 1rem);
+  --step-1: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
+  --step-2: clamp(1.2rem, calc(1.07rem + 0.63vw), 1.5rem);
+  --step-3: clamp(1.44rem, calc(1.26rem + 0.89vw), 1.75rem);
+  --step-4: clamp(1.73rem, calc(1.48rem + 1.24vw), 2.5rem);
+  --step-5: clamp(2.07rem, calc(1.73rem + 1.7vw), 3rem);
+
+  /* lengths || spacing */
+
+  --lgth-1: clamp(0.25rem, calc(0.23rem + 0.11vw), 0.31rem);
+  --lgth-2: clamp(0.5rem, calc(0.46rem + 0.22vw), 0.63rem);
+  --lgth-3: clamp(0.75rem, calc(0.68rem + 0.33vw), 0.94rem);
+  --lgth-4: clamp(1rem, calc(0.91rem + 0.43vw), 1.25rem);
+  --lgth-5: clamp(1.5rem, calc(1.37rem + 0.65vw), 1.88rem);
+  --lgth-6: clamp(2rem, calc(1.83rem + 0.87vw), 2.5rem);
+  --lgth-7: clamp(3rem, calc(2.74rem + 1.3vw), 3.75rem);
+  --lgth-8: clamp(4rem, calc(3.65rem + 1.74vw), 5rem);
+  --lgth-9: clamp(6rem, calc(5.48rem + 2.61vw), 7.5rem);
+
 }
 
 body {
   background: #ece9e3;
   font-family: Roboto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #1d1c1c;
+}
+
+/* || Typography */
+
+h1 {
+  font-size: 96px;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: var(--step-5);
+  letter-spacing: -1.5px;
+  line-height: 1.3;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: var(--step-4);
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  font-size: var(--step-3);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: var(--step-2);
+  font-weight: 400;
+  letter-spacing: 0.25px;
+}
+
+h5 {
+  font-size: var(--step-1);
+  font-weight: 400;
+}
+
+h6 {
+  font-size: var(--step-0);
+  font-weight: 500;
+  letter-spacing: 0.15px;
+}
+
+.title {
+  margin-bottom: var(--xx);
+}
+
+.subtitle-1 {
+  font-size: var(--step--2);
+  font-weight: 500;
+  letter-spacing: 0.1px;
+}
+
+p, li {
+  font-size: var(--step-0);
+  letter-spacing: 0.5px;
+}
+
+.body-2 {
+  font-size: var(--step--1);
+  max-inline-size: 70ch;
+  line-height: 1.5;
+  letter-spacing: 0.25px;
+}
+
+.section-title {
+  margin-bottom: var(--lgth-6);
+  font-weight: 500;
+  /* max-inline-size: 45ch; */
+  text-align: center;
+  width: 100%;
+}
+
+.card-title {
+  margin-bottom: var(--lgth-2);
+  font-weight: 500;
+  max-inline-size: 45ch;
+}
+/* font-size: 1.75rem; /* 28px */
+
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active{
+  text-decoration: underline;
+}
+
+nav a.active {
+  font-weight: bold;
+  color: var(--light-primary-c);
 }
 
 header,
@@ -23,6 +153,11 @@ footer {
 
 footer .container {
   padding-block: 32px;
+}
+
+.menu_ .container {
+  padding-block: var(--lgth-6);
+
 }
 
 nav {
@@ -65,10 +200,9 @@ nav a {
 .container {
   max-width: 1200px;
   margin-inline: auto;
-  /* padding-block: 24px; */
 }
 
-main {
+.menu_ .container {
   /* height: 100vh; */
 }
 
@@ -124,9 +258,6 @@ footer li:first-of-type {
   grid-area: 1/-1;
 }
 
-h1 {
-  font-size: 96px;
-}
 
 .title {
   color: #fefefe;
@@ -153,7 +284,6 @@ h1 {
 .menu-about {
   padding: 60px;
   background: #d9d9d9;
-  /* background: red; */
 }
 
 .menu p {
@@ -183,7 +313,6 @@ button {
 }
 
 .info {
-  /* background: red; */
   display: flex;
   max-width: 1200px;
   margin: auto;
@@ -228,7 +357,7 @@ button {
 
 .drinks {
  display: flex; 
- /* justify-content: center; */
+ justify-content: center;
  flex-wrap: wrap;
  max-width: 1200px;
  margin: auto;
@@ -236,7 +365,15 @@ button {
 }
 
 .drink{
-  /* min-width: 200px; */
-  background: red;
-  width: max-content;
+  margin-bottom: var(--lgth-5);
+  /* border: 1px solid var(--gray-600); */
+  padding: var(--lgth-4);
+  min-width: 420px;
+  width: 420px;
+  /* width: max-content; */
+}
+
+.drink-disc{
+  max-inline-size: 35ch;
+  margin-bottom: var(--lgth-1);
 }

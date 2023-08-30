@@ -51,11 +51,11 @@ function Navigation() {
   /* or I can define this as handle click instead of listening to global click, I don't perhaps the good thing about this is that it helps with decoupling the compont from logic.*/
 
   window.addEventListener('click', (e) => {
-    const container = document.querySelector('#container');
+    const page = document.querySelector('#page');
     if (e.target.matches('[data-link]')) {
       e.preventDefault();
       history.pushState('', '', e.target.href);
-      main.innerHTML = servePage();
+      page.innerHTML = servePage();
     }
   });
 
@@ -73,8 +73,8 @@ function Navigation() {
 }
 
 function App() {
-  const here = () => document.querySelector('#container');
-  const { link, servePage } = Navigation(here);
+  /* const page = () => document.querySelector('#page'); */
+  const { link, servePage } = Navigation();
   /* const page = render(); */
   /* const handle = click(); */
   return `<header>
@@ -91,7 +91,7 @@ function App() {
     </ul>
   </nav>
 </header>
-<main id="main">
+<main id="page">
   ${servePage()}
 </main>
 <footer>
@@ -101,5 +101,5 @@ function App() {
   </div>
 </footer>`;
 }
-/* const content = document.querySelector('#content') */
+const content = document.querySelector('#content')
 content.innerHTML = App();

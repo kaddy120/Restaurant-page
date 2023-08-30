@@ -1,4 +1,5 @@
 import cupImg from '../assets/Vector.svg';
+
 const drinks = [
   {
     name: 'Expresso',
@@ -53,9 +54,9 @@ export default function Menu() {
 
   for (let drink of drinks) {
     menu += `<div class="drink"> 
-       <h4>${drink.name}</h4>
-       <p>${drink.discription}</p>
-       <ul class='drik-sizes'>${priceList(drink.cup)}
+       <h5 class='card-title'>${drink.name}</h5>
+       <p class='drink-disc'>${drink.discription}</p>
+       <ul class='drink-sizes'>${priceList(drink.cup)}
     </div>`;
   }
 
@@ -67,11 +68,13 @@ export default function Menu() {
         <h1 class="title">Our Menu</h1>
       </div>
     </article>
-   <div class="menu_drinks">
-        <h3><span>${cupIcon.outerHTML}<span> Drinks</h3> 
-        <div class='drinks'>
-          ${menu}
-        </div>
-   </div>
+    <div class="container">
+       <div class="menu_drinks">
+            <h3 class='section-title'><span>${cupIcon.outerHTML}<span> Drinks</h3> 
+            <div class='drinks'>
+              ${menu}
+            </div>
+       </div>
+    </div>
 </section>`;
 }
