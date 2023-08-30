@@ -71,6 +71,7 @@ export default function Menu() {
     <div class="container">
        <div class="menu_drinks">
             <h3 class='section-title'><span>${cupIcon.outerHTML}<span> Drinks</h3> 
+            <hr>
             <div class='drinks'>
               ${menu}
             </div>

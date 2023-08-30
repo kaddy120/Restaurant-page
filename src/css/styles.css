@@ -120,6 +120,10 @@ p, li {
   width: 100%;
 }
 
+.menu_ .section-title{
+  margin-bottom: var(--lgth-2);
+}
+
 .card-title {
   margin-bottom: var(--lgth-2);
   font-weight: 500;
@@ -155,13 +159,13 @@ footer .container {
   padding-block: 32px;
 }
 
-.menu_ .container {
+.menu_ .container, .contact .container {
   padding-block: var(--lgth-6);
 
 }
 
 nav {
-  max-width: 1200px;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   margin-inline: auto;
@@ -178,7 +182,6 @@ svg {
 
 nav ul {
   display: flex;
-  font-size: 20px;
 }
 
 .list-space {
@@ -198,7 +201,7 @@ nav a {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin-inline: auto;
 }
 
@@ -359,21 +362,35 @@ button {
  display: flex; 
  justify-content: center;
  flex-wrap: wrap;
- max-width: 1200px;
- margin: auto;
- 
+}
+
+hr {
+  margin-bottom: var(--lgth-4);
 }
 
 .drink{
-  margin-bottom: var(--lgth-5);
-  /* border: 1px solid var(--gray-600); */
-  padding: var(--lgth-4);
-  min-width: 420px;
-  width: 420px;
-  /* width: max-content; */
+  margin-bottom: var(--lgth-2);
+  padding-block: var(--lgth-4);
+  padding-inline: var(--lgth-4);
+  width: 450px;
 }
 
 .drink-disc{
-  max-inline-size: 35ch;
+  max-inline-size: 40ch;
   margin-bottom: var(--lgth-1);
+}
+
+
+.contact_list {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+.contanct_list_item{
+ min-width: 400px;
+ padding: var(--lgth-5);
+ margin-bottom: var(--lgth-5);
+ background: #FCFCFB;
 }
