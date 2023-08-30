@@ -1,7 +1,7 @@
-/*get link*/
+/* uuu*get link*/
 import baristaImg from '../assets/barista.png';
-import location from '../assets/Location.svg'
-import time from "../assets/Group 42.svg";
+import location from '../assets/Location.svg';
+import time from '../assets/Group 42.svg';
 
 export default function Home() {
   const myIcon = new Image();
@@ -31,7 +31,8 @@ export default function Home() {
                 </p>
                 <button>View Menu</button>
            </div>
-           <section class='info'> 
+          </div>
+          <section class='info'> 
              <div class='container'>
                <div>
                  <div class="info-icon">
@@ -53,7 +54,6 @@ export default function Home() {
                </div>
              </div>
            </section>
-          </div>
           </div>
         </section>
 `;

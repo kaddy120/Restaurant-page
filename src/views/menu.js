@@ -1,3 +1,4 @@
+import cupImg from '../assets/Vector.svg';
 const drinks = [
   {
     name: 'Expresso',
@@ -38,6 +39,10 @@ const drinks = [
 export default function Menu() {
   let menu = '';
 
+  const cupIcon = new Image();
+  cupIcon.src = cupImg;
+  cupIcon.classList.add('cup-icon');
+
   const priceList = (cups) => {
     let list = '';
     for (let cup of cups) {
@@ -47,14 +52,26 @@ export default function Menu() {
   };
 
   for (let drink of drinks) {
-    menu += `<div> 
-       <h3>${drink.name}</h3>
+    menu += `<div class="drink"> 
+       <h4>${drink.name}</h4>
        <p>${drink.discription}</p>
-       <ul>${priceList(drink.cup)}
+       <ul class='drik-sizes'>${priceList(drink.cup)}
     </div>`;
   }
 
-  return `<div><h1>Hot Baverages</h1>
-    ${menu}
-</div>`;
+  return `
+<section class='menu_'>
+   <article class="hero">
+      <div class='hero-bg_img'></div>
+      <div class='hero-intro'>
+        <h1 class="title">Our Menu</h1>
+      </div>
+    </article>
+   <div class="menu_drinks">
+        <h3><span>${cupIcon.outerHTML}<span> Drinks</h3> 
+        <div class='drinks'>
+          ${menu}
+        </div>
+   </div>
+</section>`;
 }
