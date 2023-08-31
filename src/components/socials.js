@@ -1,6 +1,6 @@
 export const socialsList = `
       <li>
-        <a href=""
+        <a href="https://github.com/kaddy120/Restaurant-page"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"
@@ -12,7 +12,7 @@ export const socialsList = `
         ></a>
       </li>
       <li>
-        <a href=""
+        <a href="https://twitter.com/KaddyDev"
           ><svg
             xmlns="http://www.w3.org/2000/svg"
             height="1em"

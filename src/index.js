@@ -36,19 +36,11 @@ function Navigation() {
   const router = () => {
     let view = routes[location.pathname];
     if (view) {
-      /* serving = location.pathname; */
-      /* console.log(serving); */
-      /* document.title = view.title; */
-      /* ref.innerHTML = ' '; */
-      /* ref.append(view.render()); */
-      /* return; */
     } else {
       history.pushState('', '', '/');
       router();
     }
   };
-
-  /* or I can define this as handle click instead of listening to global click, I don't perhaps the good thing about this is that it helps with decoupling the compont from logic.*/
 
   window.addEventListener('click', (e) => {
     const page = document.querySelector('#page');
@@ -59,12 +51,9 @@ function Navigation() {
     }
   });
 
-  /* window.addEventListener('popstate', router); */
-
   window.addEventListener('DOMContentLoaded', router);
 
   const link = (href, name, page) => {
-    /* I would like to pass handle click to this link */
     routes[href] = { title: name, render: page };
     return `<a href="${href}" data-link>${name}</a>`;
   };
@@ -73,10 +62,7 @@ function Navigation() {
 }
 
 function App() {
-  /* const page = () => document.querySelector('#page'); */
   const { link, servePage } = Navigation();
-  /* const page = render(); */
-  /* const handle = click(); */
   return `<header>
   <nav>
     <div class="log">

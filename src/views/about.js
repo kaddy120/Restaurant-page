@@ -16,8 +16,24 @@ const contacts = [
 ];
 
 export default function About() {
-  let html = '';
+  let contactList = '';
 
+  for (let contact of contacts) {
+    contactList += contactItem(contact);
+  }
+  return `
+<section class='contact'>
+  <div class='container'>
+    <h3 class='section-title'>Contact us</h3>
+    <div class='contact_list'>
+      ${contactList}
+    </div>
+  </div>
+</section>
+`;
+}
+
+function contactItem(contact) {
   const detailsList = (details) => {
     let list = '';
     for (let item of details) {
@@ -26,23 +42,10 @@ export default function About() {
     return list;
   };
 
-  for (let contant of contacts) {
-      html += `<div class='contanct_list_item'>
-      <h4 class='card-title'>${contant.title}</h4>
+  return `<div class='contanct_list_item'>
+      <h4 class='card-title'>${contact.title}</h4>
       <ul>
-         ${detailsList(contant.details)}
+         ${detailsList(contact.details)}
       </ul> 
      </div>`;
-  }
-  return `
-<section class='contact'>
-  <div class='container'>
-    <h3 class='section-title'>Contact us</h3>
-    <div class='contact_list'>
-      ${html}
-    </div>
-  </div>
-</section>
-`  
 }
-
