@@ -1,6 +1,6 @@
 import Home from './views/home';
 import Menu from './views/menu';
-import About from './views/about';
+import Contact from './views/about';
 import { Link, ServePage, Routes } from './utils/router';
 import { socialsList } from './components/socials';
 import './css/styles.css';
@@ -8,7 +8,7 @@ import './css/styles.css';
 const route = {
   '/': { title: 'Home', render: Home },
   '/menu': { title: 'Menu', render: Menu },
-  '/about': { title: 'About', render: About },
+  '/contact': { title: 'Contact', render: Contact },
 };
 
 function App() {
