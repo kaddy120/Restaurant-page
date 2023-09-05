@@ -15,7 +15,7 @@ const contacts = [
   },
 ];
 
-export default function About() {
+export default function Contact() {
   let contactList = '';
 
   for (let contact of contacts) {

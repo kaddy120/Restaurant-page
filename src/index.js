@@ -7,8 +7,8 @@ import './css/styles.css';
 
 const route = {
   '/': { title: 'Home', render: Home },
-  '/menu': { title: 'Menu', render: Menu },
   '/contact': { title: 'Contact', render: Contact },
+  '/menu': { title: 'Menu', render: Menu },
 };
 
 function App() {
@@ -22,6 +22,7 @@ function App() {
       <li>${Link('/', 'Home')}</li>
       <li>${Link('/menu', 'Menu')}</li>
       <li>${Link('/contact', 'Contact')}</li>
+      <li>${Link('/menu', 'Menu')}</li>
       <li class='list-space'></li>
       ${socialsList}
     </ul>
