@@ -135,6 +135,16 @@ a:hover {
   text-decoration: underline;
 }
 
+button:hover {
+  cursor: pointer;
+  /* background: red; */
+  /* color: black; */
+}
+
+.current-page {
+  text-decoration: underline;
+}
+
 a:active {
   text-decoration: underline;
 }
@@ -182,8 +192,8 @@ nav ul {
 .list-space {
 }
 
-nav li{
- margin-top: auto;
+nav li {
+  margin-top: auto;
 }
 
 nav li + li {
@@ -248,7 +258,7 @@ footer li:first-of-type {
 .hero-tagline {
   max-inline-size: 52ch;
   color: #e4e3e3;
-  font-size: 32px;
+  font-size: var(--step-2);
   text-align: center;
 }
 
@@ -307,10 +317,10 @@ footer li:first-of-type {
 }
 
 button {
-  font-size: 18px;
+  font-size: var(--step-0);
   font-weight: 500;
-  padding-inline: 32px;
-  padding-block: 16px;
+  padding-inline: var(--lgth-4);
+  padding-block: var(--lgth-2);;
   border: 2px solid #000;
 }
 
@@ -402,4 +412,10 @@ hr {
   padding: var(--lgth-5);
   margin-bottom: var(--lgth-5);
   background: #fcfcfb;
+}
+
+@media (max-width: 1450px) {
+  nav, .hero-intro > *, .menu, .info .container{
+    margin-inline: var(--lgth-4);
+  }
 }
