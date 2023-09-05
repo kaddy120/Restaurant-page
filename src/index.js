@@ -23,7 +23,6 @@ function App() {
       <li>${Link('/menu', 'Menu')}</li>
       <li>${Link('/contact', 'Contact')}</li>
       <li>${Link('/menu', 'Menu')}</li>
-
       <li class='list-space'></li>
       ${socialsList}
     </ul>
