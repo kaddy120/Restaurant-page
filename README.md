@@ -10,7 +10,7 @@ View a [Live Demo](https://restaurant-page-phi.vercel.app/) for this project.
 ## Tech Stack
 
 - **Frontend**: `CSS`, `JavaScript`.
-- **Build Tool**: `Webpack`.
+- **Build Tool**: `Node.js`, `Webpack`.
 
 ## Getting started 
 Clone and navigate to the project directory.
