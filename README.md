@@ -25,7 +25,7 @@ Install the project dependencies:
 
 Run the development server:
 ```
- $ npm start
+ $ npm run dev
 ```
 
 Build the project for deployment 
